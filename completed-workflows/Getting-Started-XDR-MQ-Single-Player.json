@@ -1,0 +1,527 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu",
+    "name": "Getting-Started-XDR-MQ-Single-Player",
+    "title": "Getting-Started-XDR-MQ-Single-Player",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Client URL",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_025V5FH770YVA4d3HoCo6qMwvK6QqH67ruP",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Email",
+          "type": "datatype.string",
+          "description": "Please Enter your Email! We'll use this to send an email to you following the game with winner details.",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_025V5FH770MRO4rPenVeJImQ0N6NdmbUJ2C",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Participant Name",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_025V5FH7716RN380wMBBoQpyF4KXinAasPO",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "{\n    \"house\": {\n        \"name\": \"house\", \n        \"money\": 0\n        }, \n    \"players\": \n        [ ], \n    \"playerturn\": {}, \n\t\t  \n    \"gameid\": \"2mKYQR-klZ6XahlIAAAD\"\n} ",
+          "scope": "local",
+          "name": "Data Format",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_025V5FH771E5B2MIxg2cFSkYbotDXXaHtV0",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "game_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_025V5FH76ZKTC6h7o8GaBvSJVTdJXIBucNo",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": false,
+          "scope": "input",
+          "name": "Ready?",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_025V5FH76ZXDS7Iy5LBQBcGvyBvIHsAGROs",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Getting-Started-XDR-MQ-Single-Player",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_025V5FHA2646T2FMB7uwISuaU0LgErK2QKt",
+        "name": "Testing Only: Clean Up",
+        "title": "Testing Only: Clean Up",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "Clean up to be used for testing only. Deletes all previous table entries.",
+          "display_name": "Testing Only: Clean Up",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_025UMELYX71I75sJIo6lYIRKvDkykEGJ5u7",
+          "workflow_name": "Single-Player-Testing-Only-Clear Previous Blackjack Games"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_025V5FHC35MS83VzxwpzSan9f9cvJ6o49Cd",
+        "name": "Check Unique Name",
+        "title": "Check Unique Name",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "This Atomic Function ensures the name entered by the user in starting this workflow is unique. It does this by checking the input against all names previous entered by other players.",
+          "display_name": "Check Unique Name",
+          "input": {
+            "variable_workflow_025QO3K97KUNG0Ke8re1N3gXcSe0uETSi2T": "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.input.variable_workflow_025V5FH7716RN380wMBBoQpyF4KXinAasPO$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_025QO3K8KA6HD57s5Ls8vkHuiTxLJnVJx8V",
+          "workflow_name": "Check Unique Name"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_025V5FHDWYJRT75TJZg8GummMdRZW6kwEnE",
+        "name": "Getting the Table Ready",
+        "title": "Getting the Table Ready",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "This Atomic Function stores key user information in a global data record to be used in later activities, called \"Blackjack Game History\". This data record will be updated dynamically as players complete their workflows and begin playing Blackjack. ",
+          "display_name": "Getting the Table Ready",
+          "input": {
+            "variable_workflow_025QO7JGNRIUX2IO3HJiJr9IBGZRpHRCZme": true,
+            "variable_workflow_025QO7JGNRRED7L9mLXIe98FJlo2fpsAajY": "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.input.variable_workflow_025V5FH770MRO4rPenVeJImQ0N6NdmbUJ2C$",
+            "variable_workflow_025QO7JGNRZIP2FpFAvppALdoofR6JOJczG": "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.input.variable_workflow_025V5FH770YVA4d3HoCo6qMwvK6QqH67ruP$",
+            "variable_workflow_025QO7JGNS77P2fbUOzsPlNbwyfa4F35edH": "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.input.variable_workflow_025V5FH7716RN380wMBBoQpyF4KXinAasPO$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_025QO7JG2P8IP2GwLbdw5vzSunk4JGBdqZU",
+          "workflow_name": "Getting the Tables Ready"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_025V9FDWNOVSU16hxfqOciEnHQnjTKaaNUZ",
+        "name": "Initialize Blackjack Game - Single Player",
+        "title": "Initialize Blackjack Game - Single Player",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "This Atomic Function generates a random game_id and sends this, along with the input username, to the player's game client. This initializes the game of Blackjack for the game client. This information is also stored in the XDR global data record, \"Blackjack Game History\".",
+          "display_name": "Initialize Blackjack Game - Single Player",
+          "input": {
+            "variable_workflow_025V8W920O2TD0fWvQBm8KDa7EwBQJJFPwc": "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.input.variable_workflow_025V5FH7716RN380wMBBoQpyF4KXinAasPO$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_025V8SI32E1I61pxPwmzoVOSRbgkfQ9B0qh",
+          "workflow_name": "Initialize Blackjack Game - Single Player"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_025V5FHLW0YY54HRF574G6IfcliDoPyHBzT",
+        "name": "While Loop",
+        "title": "While Game Is Active",
+        "type": "logic.while",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "This loop occurs for the duration of the session. ",
+          "display_name": "While Game Is Active",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_025V5FHMN1TT54jkNuIJnLpK6mgw7omxQpr",
+            "name": "Condition Branch",
+            "title": "If game_counter < 500",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.local.variable_workflow_025V5FH76ZKTC6h7o8GaBvSJVTdJXIBucNo$",
+                  "operator": "lt",
+                  "right_operand": 500
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$global.variable_025R2OZ4IU8AH1cybIGaZ71aQ8d6OxuxKrQ.global.variable_025R2OZ4IU8AH1cybIGaZ71aQ8d6OxuxKrQ$",
+                  "operator": "eq",
+                  "right_operand": true
+                }
+              },
+              "continue_on_failure": false,
+              "description": "This is the exit condition of our while loop. In this case, we update a counter called \"game_counter\" up to 500, at which point the game of Blackjack will conclude. ",
+              "display_name": "If game_counter < 500",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_025V5FHT831WT38OUNsiEG0359csFjGTypR",
+                "name": "Execute Python Script",
+                "title": "Get Game State From The User's Client",
+                "type": "python3.script",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "description": "This activity block allows us to insert Python code into our XDR Orchestration workflow! In this case, we input the client URL and make a \"Get\" request to our client to obtain information on the current state of the game. In particular, we want to keep track of earnings as hands are being played and store this information globally. ",
+                  "display_name": "Get Game State From The User's Client",
+                  "script": "import sys, json, requests\n\n#Load client url into variable url\nurl=sys.argv[1]\n\n#add API endpoint for reading and posting to the client game config\nactive_url=url + \"/api/config\"\n\n#Perform a get api request using the requests library\nheaders = {\n            'Content-Type': 'application/json',\n            'Accept': 'application/json'\n            }\npayload = json.dumps({})\nresponse = requests.request(\"GET\", active_url, headers=headers, data=payload)\n\n#Load the response into a dictionary\ncurrent_config = json.loads(response.text)\n\n#The current money for your player will be the value under the key \"balance\"\ncurrent_money = current_config[\"balance\"]",
+                  "script_arguments": [
+                    "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.input.variable_workflow_025V5FH770YVA4d3HoCo6qMwvK6QqH67ruP$"
+                  ],
+                  "script_queries": [
+                    {
+                      "script_query": "current_money",
+                      "script_query_name": "current_money",
+                      "script_query_type": "integer"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_025V5MAU809SW6qa8dBVkQRsaxZQQFWGCbx",
+                "name": "Update Row in Table",
+                "title": "Update Game Record",
+                "type": "core.updaterowintable",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "columns": [
+                    {
+                      "column_name": "Money",
+                      "column_type": "string"
+                    }
+                  ],
+                  "continue_on_failure": false,
+                  "description": "This Active Block updates the player balance stored in the global game record.",
+                  "display_name": "Update Game Record",
+                  "input_table": "$global.variable_025TDWAFIHVAG56r4GFXzVeQOknhbBdI96A.global.variable_025TDWAFIHVAG56r4GFXzVeQOknhbBdI96A$",
+                  "row": [
+                    {
+                      "key": "Money",
+                      "type": "string",
+                      "value": "$activity.definition_activity_025V5FHT831WT38OUNsiEG0359csFjGTypR.output.script_queries.current_money$"
+                    }
+                  ],
+                  "rows": {
+                    "all_rows": true
+                  },
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_025V5FI0F1ZCF1D1ryOZdReT1ZVI000PNjP",
+                "name": "Set Variables",
+                "title": "Add to game_counter",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Add to game_counter",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.local.variable_workflow_025V5FH76ZKTC6h7o8GaBvSJVTdJXIBucNo$",
+                      "variable_value_new": "$workflow.definition_workflow_025V5FH6GXOS84WOrDKAuPkSxgEvP7qP2Cu.local.variable_workflow_025V5FH76ZKTC6h7o8GaBvSJVTdJXIBucNo$+1"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_025V5FI1AUQKO5K9DL46VKTYxjUYKpWojBB",
+                "name": "Sleep",
+                "title": "Pause before next Polling Interval",
+                "type": "core.sleep",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Pause before next Polling Interval",
+                  "skip_execution": false,
+                  "sleep_interval": 3
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_025V5FI21S43Z6cn7GcKalf2XqSH2HGjcW9",
+        "name": "Select from Table",
+        "title": "Filter player list",
+        "type": "core.selectfromtable",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "columns": [
+            {
+              "column_name": "Attendee",
+              "column_type": "string"
+            },
+            {
+              "column_name": "Money",
+              "column_type": "string"
+            },
+            {
+              "column_name": "Email",
+              "column_type": "string"
+            },
+            {
+              "column_name": "Game_id",
+              "column_type": "string"
+            }
+          ],
+          "continue_on_failure": false,
+          "description": "This Activity Block filters our global game record and creates a string we can import into the following python function.",
+          "display_name": "Filter player list",
+          "input_table": "$global.variable_025TDWAFIHVAG56r4GFXzVeQOknhbBdI96A.global.variable_025TDWAFIHVAG56r4GFXzVeQOknhbBdI96A$",
+          "number_of_rows": {
+            "all_rows": true
+          },
+          "persist_output": false,
+          "skip_execution": false,
+          "sorting": {
+            "no_sort": true
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_025V5FI3SPE0B5mnFW7W2O9kJZcIoRKDhU2",
+        "name": "Execute Python Script",
+        "title": "Compute Max Earnings",
+        "type": "python3.script",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "description": "This Python function determined who has the maximum earnings during the game time. The winning name is sent to the email Atomic Function.",
+          "display_name": "Compute Max Earnings",
+          "script": "import sys, json, math\n\n#Load the string representation of our global data record into \"final_results\"\nfinal_results=json.loads(sys.argv[1])\nscore_list=[]\n\n#Create a list of only earnings values\nfor result in final_results:\n  score_list.append(int(result[\"Money\"]))\n\n#Determine the maximum earnings\nwinning_score=max(score_list)\n\n#Determine which player had the maximum earnings\nfor result in final_results:\n  if winning_score==int(result[\"Money\"]):\n    winning_name=result[\"Attendee\"]",
+          "script_arguments": [
+            "$activity.definition_activity_025V5FI21S43Z6cn7GcKalf2XqSH2HGjcW9.output.response_body$"
+          ],
+          "script_queries": [
+            {
+              "script_query": "winning_name",
+              "script_query_name": "winning_name",
+              "script_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_025V5FI5QK7TD0ESdffAEwjWhcWoRN0rTqL",
+        "name": "Send Congratulations Email",
+        "title": "Send Congratulations Email",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "This Atomic Function sends an email to all players thanking them for playing SecureX Blackjack!",
+          "display_name": "Send Congratulations Email",
+          "input": {
+            "variable_workflow_025R4XYAQKL101RsrpvPgwcf8dgs8JKF16f": "$activity.definition_activity_025V5FI3SPE0B5mnFW7W2O9kJZcIoRKDhU2.output.script_queries.winning_name$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_025KXZZ522PI52xzHm3Z0DXEUvAwQesJAD5",
+          "workflow_name": "Winner Email"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "variables": {
+    "variable_025R2OZ4IU8AH1cybIGaZ71aQ8d6OxuxKrQ": {
+      "unique_name": "variable_025R2OZ4IU8AH1cybIGaZ71aQ8d6OxuxKrQ",
+      "properties": {
+        "value": false,
+        "scope": "global",
+        "name": "Start Game",
+        "type": "datatype.boolean",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    },
+    "variable_025TDWAFIHVAG56r4GFXzVeQOknhbBdI96A": {
+      "unique_name": "variable_025TDWAFIHVAG56r4GFXzVeQOknhbBdI96A",
+      "schema_id": "tabletype_025TDSGYK72MZ1nddMrMQFYgsNwjixyviTg",
+      "properties": {
+        "value": [
+          {
+            "column_data": {
+              "Attendee": "grefsd",
+              "Email": "sdgs",
+              "Game_id": "1287202928",
+              "Money": "250",
+              "URL": "https://app-8080-4909959967641085768.devenv-stg.us-west-1.devnetcloud.com"
+            }
+          }
+        ],
+        "scope": "global",
+        "name": "Blackjack Game History",
+        "type": "datatype.table",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    }
+  },
+  "table_types": {
+    "tabletype_025TDSGYK72MZ1nddMrMQFYgsNwjixyviTg": {
+      "unique_name": "tabletype_025TDSGYK72MZ1nddMrMQFYgsNwjixyviTg",
+      "data_type": "datatype.tabletype",
+      "display_name": "XDR Blackjack Storage",
+      "columns": [
+        {
+          "name": "URL",
+          "title": "Client URL",
+          "type": "string"
+        },
+        {
+          "name": "Game_id",
+          "title": "Game Id",
+          "type": "string"
+        },
+        {
+          "maxLength": 40,
+          "maximum": 0,
+          "minimum": 0,
+          "name": "Attendee",
+          "title": "Player Name",
+          "type": "string"
+        },
+        {
+          "name": "Money",
+          "title": "Earnings",
+          "type": "string"
+        },
+        {
+          "name": "Email",
+          "title": "Email",
+          "type": "string"
+        }
+      ],
+      "base_type": "datatype",
+      "object_type": "tabletype"
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_025UMELYX71I75sJIo6lYIRKvDkykEGJ5u7",
+    "definition_workflow_025QO3K8KA6HD57s5Ls8vkHuiTxLJnVJx8V",
+    "definition_workflow_025QO7JG2P8IP2GwLbdw5vzSunk4JGBdqZU",
+    "definition_workflow_025V8SI32E1I61pxPwmzoVOSRbgkfQ9B0qh",
+    "definition_workflow_025KXZZ522PI52xzHm3Z0DXEUvAwQesJAD5"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_025UMELYX71I75sJIo6lYIRKvDkykEGJ5u7",
+    "definition_workflow_025QO3K8KA6HD57s5Ls8vkHuiTxLJnVJx8V",
+    "definition_workflow_025QO7JG2P8IP2GwLbdw5vzSunk4JGBdqZU",
+    "definition_workflow_025V8SI32E1I61pxPwmzoVOSRbgkfQ9B0qh",
+    "definition_workflow_025KXZZ522PI52xzHm3Z0DXEUvAwQesJAD5"
+  ]
+}
