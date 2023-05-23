@@ -20,6 +20,19 @@
         "object_type": "variable_workflow"
       },
       {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "{\n    \"house\": {\n        \"name\": \"house\", \n        \"money\": 0\n        }, \n    \"players\": \n        [ ], \n    \"playerturn\": {}, \n\t\t  \n    \"gameid\": \"2mKYQR-klZ6XahlIAAAD\"\n} ",
+          "scope": "local",
+          "name": "Data Format",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_025WRGWG2G66L3tzddKeIjsWDjMOKGopyF5",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.integer",
         "properties": {
           "value": 0,
@@ -43,19 +56,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_025WRGWG2GN2K1Zou1jwnqIPeQVM1hx8wQR",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "{\n    \"house\": {\n        \"name\": \"house\", \n        \"money\": 0\n        }, \n    \"players\": \n        [ ], \n    \"playerturn\": {}, \n\t\t  \n    \"gameid\": \"2mKYQR-klZ6XahlIAAAD\"\n} ",
-          "scope": "local",
-          "name": "Data Format",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_025WRGWG2G66L3tzddKeIjsWDjMOKGopyF5",
         "object_type": "variable_workflow"
       }
     ],
@@ -97,15 +97,23 @@
             "properties": {
               "condition": {
                 "left_operand": {
-                  "left_operand": "",
-                  "operator": "eq",
-                  "right_operand": "TO DO"
+                  "left_operand": {
+                    "left_operand": "",
+                    "operator": "eq",
+                    "right_operand": "TO DO"
+                  },
+                  "operator": "and",
+                  "right_operand": {
+                    "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.input.variable_workflow_025WRGWG2GFGD1JIW4Qai48CCY7cx0PilVQ$",
+                    "operator": "eq",
+                    "right_operand": false
+                  }
                 },
                 "operator": "and",
                 "right_operand": {
-                  "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.input.variable_workflow_025WRGWG2GFGD1JIW4Qai48CCY7cx0PilVQ$",
+                  "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GN2K1Zou1jwnqIPeQVM1hx8wQR$",
                   "operator": "eq",
-                  "right_operand": false
+                  "right_operand": true
                 }
               },
               "continue_on_failure": false,
@@ -379,13 +387,21 @@
             "properties": {
               "condition": {
                 "left_operand": {
-                  "left_operand": "",
-                  "operator": "eq",
-                  "right_operand": "TO DO"
+                  "left_operand": {
+                    "left_operand": "",
+                    "operator": "eq",
+                    "right_operand": "TO DO"
+                  },
+                  "operator": "and",
+                  "right_operand": {
+                    "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.input.variable_workflow_025WRGWG2GFGD1JIW4Qai48CCY7cx0PilVQ$",
+                    "operator": "eq",
+                    "right_operand": true
+                  }
                 },
                 "operator": "and",
                 "right_operand": {
-                  "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.input.variable_workflow_025WRGWG2GFGD1JIW4Qai48CCY7cx0PilVQ$",
+                  "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GN2K1Zou1jwnqIPeQVM1hx8wQR$",
                   "operator": "eq",
                   "right_operand": true
                 }
@@ -421,9 +437,17 @@
             "base_type": "activity",
             "properties": {
               "condition": {
-                "left_operand": "",
-                "operator": "eq",
-                "right_operand": "TO DO"
+                "left_operand": {
+                  "left_operand": "",
+                  "operator": "eq",
+                  "right_operand": "TO DO"
+                },
+                "operator": "or",
+                "right_operand": {
+                  "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GN2K1Zou1jwnqIPeQVM1hx8wQR$",
+                  "operator": "eq",
+                  "right_operand": false
+                }
               },
               "continue_on_failure": false,
               "display_name": "Tests Failed Or Not Implemented",
@@ -517,6 +541,69 @@
               "Money": "250",
               "URL": "https://app-8080-4619504353809617964.devenv-stg.us-west-1.devnetcloud.com"
             }
+          },
+          {
+            "column_data": {
+              "Attendee": "Matthew Quarisa",
+              "Email": "gfsd",
+              "Game_id": "\"xxx\"",
+              "Money": "1000",
+              "URL": "https://app-8080-7499038825641147631.devenv-stg.us-west-1.devnetcloud.com"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "Matthew Quarisa",
+              "Email": "fdaw",
+              "Game_id": "\"xxx\"",
+              "Money": "1000",
+              "URL": "https://app-8080-7499038825641147631.devenv-stg.us-west-1.devnetcloud.com"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "Matthew Quarisa",
+              "Email": "fad",
+              "Game_id": "\"xxx\"",
+              "Money": "1000",
+              "URL": "https://app-8080-7499038825641147631.devenv-stg.us-west-1.devnetcloud.com"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "Matty Q",
+              "Email": "mquarisa@cisco.com",
+              "Game_id": "\"xxx\"",
+              "Money": "200",
+              "URL": "https://app-8080-8974111400599071741.devenv-stg.us-west-1.devnetcloud.com"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "Matty Quarisa",
+              "Email": "fbanjw",
+              "Game_id": "2430867782",
+              "Money": "200",
+              "URL": "https://app-8080-8974111400599071741.devenv-stg.us-west-1.devnetcloud.com"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "hegrwfeqd",
+              "Email": "ntreg",
+              "Game_id": "1960549383",
+              "Money": "250",
+              "URL": "https://app-8080-8974111400599071741.devenv-stg.us-west-1.devnetcloud.com"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "hgrfweq",
+              "Email": "grwfe",
+              "Game_id": "1029562400",
+              "Money": "250",
+              "URL": "https://app-8080-8974111400599071741.devenv-stg.us-west-1.devnetcloud.com"
+            }
           }
         ],
         "scope": "global",
@@ -534,6 +621,11 @@
       "data_type": "datatype.tabletype",
       "display_name": "XDR Blackjack Storage",
       "columns": [
+        {
+          "name": "URL",
+          "title": "Client URL",
+          "type": "string"
+        },
         {
           "name": "Game_id",
           "title": "Game Id",
@@ -555,11 +647,6 @@
         {
           "name": "Email",
           "title": "Email",
-          "type": "string"
-        },
-        {
-          "name": "URL",
-          "title": "Client URL",
           "type": "string"
         }
       ],
