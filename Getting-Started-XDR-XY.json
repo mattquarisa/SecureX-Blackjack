@@ -1,6 +1,6 @@
 {
   "workflow": {
-    "unique_name": "definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh",
+    "unique_name": "definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5",
     "name": "Getting-Started-XDR-XY - Incomplete",
     "title": "Getting-Started-XDR-XY - Incomplete",
     "type": "generic.workflow",
@@ -16,20 +16,7 @@
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_025WRGWG2G66L3tzddKeIjsWDjMOKGopyF5",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.boolean",
-        "properties": {
-          "value": true,
-          "scope": "input",
-          "name": "Test Run",
-          "type": "datatype.boolean",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_025WRGWG2GFGD1JIW4Qai48CCY7cx0PilVQ",
+        "unique_name": "variable_workflow_025ZDVC7FYCGA3ukB2fcwH5oyNXMeP3IqvC",
         "object_type": "variable_workflow"
       },
       {
@@ -42,7 +29,20 @@
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_025WRGWG2GN2K1Zou1jwnqIPeQVM1hx8wQR",
+        "unique_name": "variable_workflow_025ZDVC7FXGYU6ZruESuGRYbgYrdZt40R6O",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": true,
+          "scope": "input",
+          "name": "Test Run",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_025ZDVC7FY2YS2uds4OknazVgIsPiKkIwyh",
         "object_type": "variable_workflow"
       },
       {
@@ -55,7 +55,7 @@
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_025WRGWG2GU6W0neTyafeI1ppigRCWjilo0",
+        "unique_name": "variable_workflow_025ZDVC7FXSD10HOhiDIE3zMYFgrWWRazLk",
         "object_type": "variable_workflow"
       }
     ],
@@ -76,7 +76,7 @@
     "object_type": "definition_workflow",
     "actions": [
       {
-        "unique_name": "definition_activity_025WRGWVOFQUT4NdH4tkkthNA3jIvXONKUf",
+        "unique_name": "definition_activity_025ZDVCAG77OU4p7ctTwA3nbbD9GRUlSzKL",
         "name": "Condition Block",
         "title": "Determine Whether To Launch SecureX Blackjack!",
         "type": "logic.if_else",
@@ -89,7 +89,7 @@
         "object_type": "definition_activity",
         "blocks": [
           {
-            "unique_name": "definition_activity_025WRGWWP4TGX39is65mXm6hDnDo7Z8eEs5",
+            "unique_name": "definition_activity_025ZDVCB60GJP6O41hwGrIwBhRUx7TXW3tX",
             "name": "Condition Branch",
             "title": "All Tests Passed And Game is Running",
             "type": "logic.condition_block",
@@ -104,14 +104,14 @@
                   },
                   "operator": "and",
                   "right_operand": {
-                    "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.input.variable_workflow_025WRGWG2GFGD1JIW4Qai48CCY7cx0PilVQ$",
+                    "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.input.variable_workflow_025ZDVC7FY2YS2uds4OknazVgIsPiKkIwyh$",
                     "operator": "eq",
                     "right_operand": false
                   }
                 },
                 "operator": "and",
                 "right_operand": {
-                  "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GN2K1Zou1jwnqIPeQVM1hx8wQR$",
+                  "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXGYU6ZruESuGRYbgYrdZt40R6O$",
                   "operator": "eq",
                   "right_operand": true
                 }
@@ -123,7 +123,7 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_025WRGWYQUBOT3U4PdZjJEhs7cU0w1uwXEU",
+                "unique_name": "definition_activity_025ZDVCCXF6Y47dln5Z2PnWhyiahLU8uhDc",
                 "name": "Initialize Blackjack Game",
                 "title": "Initialize Blackjack Game",
                 "type": "workflow.atomic_workflow",
@@ -148,7 +148,7 @@
                 "object_type": "definition_activity"
               },
               {
-                "unique_name": "definition_activity_025WRGX05F1GO0FW0Lb2M3Ln5lQb5EhGSI5",
+                "unique_name": "definition_activity_025ZDVCDX75QF5tAgmLhTSbl5WqtrWS2IxW",
                 "name": "While Loop",
                 "title": "While Game Is Active",
                 "type": "logic.while",
@@ -162,7 +162,7 @@
                 "object_type": "definition_activity",
                 "blocks": [
                   {
-                    "unique_name": "definition_activity_025WRGX105P6G5uhoQVg0hyfQH4rka0rPGn",
+                    "unique_name": "definition_activity_025ZDVCEQC7CK6IMj80VoT8TkrNBN3basMW",
                     "name": "Condition Branch",
                     "title": "If game_counter < 500",
                     "type": "logic.condition_block",
@@ -170,7 +170,7 @@
                     "properties": {
                       "condition": {
                         "left_operand": {
-                          "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GU6W0neTyafeI1ppigRCWjilo0$",
+                          "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXSD10HOhiDIE3zMYFgrWWRazLk$",
                           "operator": "lt",
                           "right_operand": 500
                         },
@@ -189,7 +189,7 @@
                     "object_type": "definition_activity",
                     "actions": [
                       {
-                        "unique_name": "definition_activity_025WRGX2HLZIS4WFiRxlfrsGXZQQ3M9bQy2",
+                        "unique_name": "definition_activity_025ZDVCG4BZQU3PFrR6qQTOVFlGjvQiyjnH",
                         "name": "Execute Python Script",
                         "title": "Get Game State From The User's Client",
                         "type": "python3.script",
@@ -215,7 +215,7 @@
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_025WRGX3OYJ5V2QnKZ7BPo55UcNhAJEkNNO",
+                        "unique_name": "definition_activity_025ZDVCH6BKPU6CXv4CfVlvhLQoFmScnLyG",
                         "name": "Update Row in Table",
                         "title": "Update Game Record",
                         "type": "core.updaterowintable",
@@ -236,7 +236,7 @@
                             {
                               "key": "Money",
                               "type": "string",
-                              "value": "$activity.definition_activity_025WRGX2HLZIS4WFiRxlfrsGXZQQ3M9bQy2.output.script_queries.current_money$"
+                              "value": "$activity.definition_activity_025ZDVCG4BZQU3PFrR6qQTOVFlGjvQiyjnH.output.script_queries.current_money$"
                             }
                           ],
                           "rows": {
@@ -248,7 +248,7 @@
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_025XUSB1AAGG71OAhjkjVeChXfrsNq8vDBS",
+                        "unique_name": "definition_activity_025ZDVCJM5S124BnrLmeWWBE7AeLluTujIE",
                         "name": "Update Leaderboard",
                         "title": "Update Leaderboard",
                         "type": "workflow.atomic_workflow",
@@ -272,7 +272,7 @@
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_025WRGX5KUA833YeNqvY0upxh9KkZvaCxnS",
+                        "unique_name": "definition_activity_025ZDVCKS9PSI2NpEM5JdxiL0YxkH9lL9ve",
                         "name": "Set Variables",
                         "title": "Increment Counter",
                         "type": "core.set_multiple_variables",
@@ -283,15 +283,15 @@
                           "skip_execution": false,
                           "variables_to_update": [
                             {
-                              "variable_to_update": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GU6W0neTyafeI1ppigRCWjilo0$",
-                              "variable_value_new": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GU6W0neTyafeI1ppigRCWjilo0$+1"
+                              "variable_to_update": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXSD10HOhiDIE3zMYFgrWWRazLk$",
+                              "variable_value_new": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXSD10HOhiDIE3zMYFgrWWRazLk$+1"
                             }
                           ]
                         },
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_025WRGX6MD8S56DEqw8svYvqezCKAX4de4x",
+                        "unique_name": "definition_activity_025ZDVCLLPCE16uDB9bCP12Z3z1Yz6L4JYK",
                         "name": "Sleep",
                         "title": "Wait Before Next Polling Interval",
                         "type": "core.sleep",
@@ -309,7 +309,7 @@
                 ]
               },
               {
-                "unique_name": "definition_activity_025WRGX7EQQRP4KwMwaISevnLsSuKgsfiB3",
+                "unique_name": "definition_activity_025ZDVCMFWDBN7TmJhJDZHAkZYa0UChRUnG",
                 "name": "Select from Table",
                 "title": "Generate Results String",
                 "type": "core.selectfromtable",
@@ -350,7 +350,7 @@
                 "object_type": "definition_activity"
               },
               {
-                "unique_name": "definition_activity_025WRGX9C01DH2NV8jqop4p0bR4ahdpCrV6",
+                "unique_name": "definition_activity_025ZDVCNYVMVN5wNtgrukkgkUFV8GVM9fhb",
                 "name": "Execute Python Script",
                 "title": "Compute Player with Max Earnings",
                 "type": "python3.script",
@@ -360,9 +360,9 @@
                   "continue_on_failure": false,
                   "description": "This Python function determined who has the maximum earnings during the game time. The winning name is sent to the email Atomic Function.",
                   "display_name": "Compute Player with Max Earnings",
-                  "script": "import sys, json, math\n\n#Load the string representation of our global data record into \"final_results\"\nfinal_results=json.loads(sys.argv[1])\nscore_list=[]\n\n#Create a list of only earnings values\nfor result in final_results:\n  score_list.append(int(result[\"Money\"]))\n\n#Determine the maximum earnings\nwinning_score=max(score_list)\n\n#Determine which player had the maximum earnings\nfor result in final_results:\n  if winning_score==int(result[\"Money\"]):\n    winning_name=result[\"Attendee\"]",
+                  "script": "import sys, json, math\n\n#Load the string representation of our global data record into \"final_results\"\nfinal_results=json.loads(sys.argv[1])\nscore_list=[]\n\n#Create a list of only earnings values\nfor result in final_results:\n  if result[\"Attendee\"] != \"\":\n     score_list.append(int(result[\"Money\"]))\n\n#Determine the maximum earnings\nwinning_score=max(score_list)\n\n#Determine which player had the maximum earnings\nfor result in final_results:\n  if result[\"Attendee\"] != \"\":\n    if winning_score==int(result[\"Money\"]):\n      winning_name=result[\"Attendee\"]",
                   "script_arguments": [
-                    "$activity.definition_activity_025WRGX7EQQRP4KwMwaISevnLsSuKgsfiB3.output.response_body$"
+                    "$activity.definition_activity_025ZDVCMFWDBN7TmJhJDZHAkZYa0UChRUnG.output.response_body$"
                   ],
                   "script_queries": [
                     {
@@ -376,7 +376,7 @@
                 "object_type": "definition_activity"
               },
               {
-                "unique_name": "definition_activity_025WRGXB7262U07V5cdfRGbvhpdvGKdURKz",
+                "unique_name": "definition_activity_025ZDVCPJCI1V7cpCbNp31xC80Kjxhn7lix",
                 "name": "Send Congratulations Email",
                 "title": "Send Congratulations Email",
                 "type": "workflow.atomic_workflow",
@@ -386,7 +386,7 @@
                   "description": "This Atomic Function sends an email to all players thanking them for playing SecureX Blackjack!",
                   "display_name": "Send Congratulations Email",
                   "input": {
-                    "variable_workflow_025R4XYAQKL101RsrpvPgwcf8dgs8JKF16f": "$activity.definition_activity_025WRGX9C01DH2NV8jqop4p0bR4ahdpCrV6.output.script_queries.winning_name$"
+                    "variable_workflow_025R4XYAQKL101RsrpvPgwcf8dgs8JKF16f": "$activity.definition_activity_025ZDVCNYVMVN5wNtgrukkgkUFV8GVM9fhb.output.script_queries.winning_name$"
                   },
                   "runtime_user": {
                     "target_default": true
@@ -403,7 +403,7 @@
             ]
           },
           {
-            "unique_name": "definition_activity_025WRGXCU0SZE6FuLCA44p3zLjWHnKCJbZP",
+            "unique_name": "definition_activity_025ZDVCQUFBAQ04mAvPN5lTTDQB9BDk7RZQ",
             "name": "Condition Branch",
             "title": "All Tests Passed - Re-run outside of a Test Run!",
             "type": "logic.condition_block",
@@ -418,14 +418,14 @@
                   },
                   "operator": "and",
                   "right_operand": {
-                    "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.input.variable_workflow_025WRGWG2GFGD1JIW4Qai48CCY7cx0PilVQ$",
+                    "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.input.variable_workflow_025ZDVC7FY2YS2uds4OknazVgIsPiKkIwyh$",
                     "operator": "eq",
                     "right_operand": true
                   }
                 },
                 "operator": "and",
                 "right_operand": {
-                  "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GN2K1Zou1jwnqIPeQVM1hx8wQR$",
+                  "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXGYU6ZruESuGRYbgYrdZt40R6O$",
                   "operator": "eq",
                   "right_operand": true
                 }
@@ -437,7 +437,7 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_025WRGXE5ZQRQ0htpdWP2K5CaWqRkSEjh8x",
+                "unique_name": "definition_activity_025ZDVCRXBANL7HUNdYVlaqVm58FA5yqHg0",
                 "name": "Completed",
                 "title": "All Tests Passed!",
                 "type": "logic.completed",
@@ -454,7 +454,7 @@
             ]
           },
           {
-            "unique_name": "definition_activity_025WRGXF6PXSK5djdRCdZPkZi2aLv5IT3iV",
+            "unique_name": "definition_activity_025ZDVCSN90QD1NqYHfsXZpTzM3Edu7PiHR",
             "name": "Condition Branch",
             "title": "Tests Failed Or Not Implemented",
             "type": "logic.condition_block",
@@ -468,7 +468,7 @@
                 },
                 "operator": "or",
                 "right_operand": {
-                  "left_operand": "$workflow.definition_workflow_025WRGWFC1KSX62FaChen0naOQvGLTNT3qh.local.variable_workflow_025WRGWG2GN2K1Zou1jwnqIPeQVM1hx8wQR$",
+                  "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXGYU6ZruESuGRYbgYrdZt40R6O$",
                   "operator": "eq",
                   "right_operand": false
                 }
@@ -480,7 +480,7 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_025WRGXGGZU9P6xKo3lHw3bhMlqfeWeNHsJ",
+                "unique_name": "definition_activity_025ZDVCTPSRTE58m1AOtv4QaoaTa59xy7Le",
                 "name": "Completed",
                 "title": "Failed Test Conditions Exception",
                 "type": "logic.completed",
@@ -533,22 +533,22 @@
           },
           {
             "column_data": {
-              "Attendee": "Matt Q",
+              "Attendee": "MatthewQuarisa",
               "Email": "12mwq@queensu.ca",
-              "Game_id": "4476200718",
-              "Money": "250",
-              "Start_time": "21:02:46",
-              "URL": "https://app-8080-4026277247115267356.devenv-stg.us-west-1.devnetcloud.com"
+              "Game_id": "9040773012",
+              "Money": "100",
+              "Start_time": "15:32:03",
+              "URL": "https://app-8080-490104014917794163.devenv-prod.us-west-1.devnetcloud.com"
             }
           },
           {
             "column_data": {
-              "Attendee": "Barry Y",
-              "Email": "grfew",
-              "Game_id": "7858807071",
-              "Money": "150",
-              "Start_time": "21:05:59",
-              "URL": "https://app-8080-8115805308063712064.devenv-stg.us-west-1.devnetcloud.com"
+              "Attendee": "MatthewQuarisa1234",
+              "Email": "matthew_quarisa@hotmail.com",
+              "Game_id": "5088858727",
+              "Money": "250",
+              "Start_time": "15:43:23",
+              "URL": "https://app-8080-490104014917794163.devenv-prod.us-west-1.devnetcloud.com"
             }
           }
         ],
@@ -568,11 +568,6 @@
       "data_type": "datatype.tabletype",
       "display_name": "XDR Blackjack Record",
       "columns": [
-        {
-          "name": "Attendee",
-          "title": "Player Name",
-          "type": "string"
-        },
         {
           "name": "Money",
           "title": "Earnings",
@@ -596,6 +591,11 @@
         {
           "name": "Start_time",
           "title": "Start Time",
+          "type": "string"
+        },
+        {
+          "name": "Attendee",
+          "title": "Player Name",
           "type": "string"
         }
       ],
