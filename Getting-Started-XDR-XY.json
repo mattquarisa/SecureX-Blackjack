@@ -1,11 +1,64 @@
 {
   "workflow": {
-    "unique_name": "definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5",
-    "name": "Getting-Started-XDR-XY - Incomplete",
-    "title": "Getting-Started-XDR-XY - Incomplete",
+    "unique_name": "definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR",
+    "name": "Getting-Started-XDR-Incomplete",
+    "title": "Getting-Started-XDR-Incomplete",
     "type": "generic.workflow",
     "base_type": "workflow",
     "variables": [
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": true,
+          "scope": "local",
+          "name": "Unique Name Check",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZB65Y1ccfmozOLeCCj1gD4uJYnL",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Client URL",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZBEB552K3Kojktn7MhdNXz3LH3e",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Email",
+          "type": "datatype.string",
+          "description": "Please Enter your Email! We'll use this to send an email to you following the game with winner details.",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZBTCS5vIY2W38WXT1uByBUsnV65",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Participant Name",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZBM5I1Wg4XrORCTgIE6Rr4hedHl",
+        "object_type": "variable_workflow"
+      },
       {
         "schema_id": "datatype.string",
         "properties": {
@@ -16,20 +69,7 @@
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_025ZDVC7FYCGA3ukB2fcwH5oyNXMeP3IqvC",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.boolean",
-        "properties": {
-          "value": false,
-          "scope": "local",
-          "name": "Unique Name Check",
-          "type": "datatype.boolean",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_025ZDVC7FXGYU6ZruESuGRYbgYrdZt40R6O",
+        "unique_name": "variable_workflow_02609J9XZC1R94wjFTO1hjsLmkhC4RLc2Pr",
         "object_type": "variable_workflow"
       },
       {
@@ -42,7 +82,7 @@
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_025ZDVC7FY2YS2uds4OknazVgIsPiKkIwyh",
+        "unique_name": "variable_workflow_02609J9XZAWZT6IkYbhWBs3nyYPZrqR5hVj",
         "object_type": "variable_workflow"
       },
       {
@@ -55,7 +95,7 @@
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_025ZDVC7FXSD10HOhiDIE3zMYFgrWWRazLk",
+        "unique_name": "variable_workflow_02609J9XZALOS1FUVoCNjM0p0WYKBuXSRhP",
         "object_type": "variable_workflow"
       }
     ],
@@ -65,31 +105,225 @@
       },
       "delete_workflow_instance": false,
       "description": "Cisco Live Session: SecureX Blackjack!",
-      "display_name": "Getting-Started-XDR-XY - Incomplete",
+      "display_name": "Getting-Started-XDR-Incomplete",
       "runtime_user": {
         "target_default": true
       },
       "target": {
-        "no_target": true
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_01MKEEBXR8ZBJ7VkdH7i74yR55W6nkyYhrp",
+        "execute_on_workflow_target": true
       }
     },
     "object_type": "definition_workflow",
     "actions": [
       {
-        "unique_name": "definition_activity_025ZDVCAG77OU4p7ctTwA3nbbD9GRUlSzKL",
+        "unique_name": "definition_activity_0260A59SK54E93PHUdOYQszRULCBBmtc38D",
+        "name": "Group",
+        "title": "Sort These Activities Into The Condition Statement Below!",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sort These Activities Into The Condition Statement Below!",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_02609V1J2S94U6jKKjhbxsYxN4srYsBWMwV",
+            "name": "Break",
+            "title": "Break",
+            "type": "logic.break",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Break",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_02609JA55IH3R71BadEy3l1V5YW7jWqsQF4",
+            "name": "HTTP Request",
+            "title": "Send Message To Webex",
+            "type": "web-service.http_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "allow_auto_redirect": true,
+              "allow_headers_redirect": false,
+              "body": "{\n\"roomId\":\"$global.variable_0257C2T1JSI077DkpTCi8lbUTOjElHqH3eZ.global.variable_0257C2T1JSI077DkpTCi8lbUTOjElHqH3eZ$\",\n\"text\": \"$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZBM5I1Wg4XrORCTgIE6Rr4hedHl$ is not a unique name in this sitting of XDR Blackjack. Please choose another display name!\"\n}",
+              "content_type": "application/json",
+              "continue_on_error_status_code": false,
+              "continue_on_failure": false,
+              "custom_headers": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer $global.variable_0257C31UC41SU5DDM61EcYCGq5j6re3ETZ5.global.variable_0257C31UC41SU5DDM61EcYCGq5j6re3ETZ5$"
+                }
+              ],
+              "description": "Send a message to Webex indicating that this name is already in use.",
+              "display_name": "Send Message To Webex",
+              "method": "POST",
+              "relative_url": "/v1/messages/",
+              "runtime_user": {
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "use_workflow_target": true
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_02609WAKYFFX134p42FfBx0uHiFFKVvE9Q2",
+            "name": "Continue",
+            "title": "Continue",
+            "type": "logic.continue",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Continue",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_02609JA6N5C5G2FFSukdUZgdGs6TwmaJSMq",
+            "name": "Completed",
+            "title": "Generate Error",
+            "type": "logic.completed",
+            "base_type": "activity",
+            "properties": {
+              "completion_type": "failed-completed",
+              "continue_on_failure": true,
+              "description": "Stop the workflow and prompt the user to enter another name.",
+              "display_name": "Generate Error",
+              "result_message": "Please choose another name",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_02609JA8ZF1EQ38krHuaQdPZxDg4nOQpHol",
+            "name": "Set Variables",
+            "title": "Write Duplicate Name",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Write Duplicate Name",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.local.variable_workflow_02609J9XZB65Y1ccfmozOLeCCj1gD4uJYnL$",
+                  "variable_value_new": false
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_02609JA12G9OZ5xNAxGm5id8XyFUxhJ8OzC",
+        "name": "For Each",
+        "title": "For Each Participant At The Table",
+        "type": "logic.for_each",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "For Each Participant At The Table",
+          "skip_execution": false,
+          "source_array": "$global.variable_025XHXMLGMOMJ2XM9pFRenhgvFxor99IE66.global.variable_025XHXMLGMOMJ2XM9pFRenhgvFxor99IE66$"
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_02609JA30CWZD76fJhCjawpO6TKEpm8UzNI",
+            "name": "Condition Block",
+            "title": "Check If Username Already Exists",
+            "type": "logic.if_else",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Check If Username Already Exists",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_02609JA3YD9TO0igOEEhtZw9Eg49lk45jGf",
+                "name": "Condition Branch",
+                "title": "If Name Does Exist",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$activity.definition_activity_02609JA12G9OZ5xNAxGm5id8XyFUxhJ8OzC.input.source_array[@].Attendee$",
+                    "operator": "eqi",
+                    "right_operand": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZBM5I1Wg4XrORCTgIE6Rr4hedHl$"
+                  },
+                  "continue_on_failure": false,
+                  "description": "If the submitted name already exists in the global game record.",
+                  "display_name": "If Name Does Exist",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_02609JA7Q9PC63dUpnY78R1szdGqw7rmnTX",
+                "name": "Condition Branch",
+                "title": "If Name Doesn't Exist",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": "$activity.definition_activity_02609JA12G9OZ5xNAxGm5id8XyFUxhJ8OzC.input.source_array[@].Attendee$",
+                    "operator": "ne",
+                    "right_operand": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZBM5I1Wg4XrORCTgIE6Rr4hedHl$"
+                  },
+                  "continue_on_failure": false,
+                  "description": "If submitted name does not exist in global game record.",
+                  "display_name": "If Name Doesn't Exist",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_0260A2BPDNPBR5971RBFzEowZrthvX3WlU7",
+        "name": "Group",
+        "title": "Drag \"Getting the Table Ready (Single Player)\" Here!",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Drag \"Getting the Table Ready (Single Player)\" Here!",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_02609JABUCOWT63gAi0J2GSY5Zdswgd9frq",
         "name": "Condition Block",
-        "title": "Determine Whether To Launch SecureX Blackjack!",
+        "title": "Determine Whether To Launch XDR Blackjack!",
         "type": "logic.if_else",
         "base_type": "activity",
         "properties": {
           "continue_on_failure": false,
-          "display_name": "Determine Whether To Launch SecureX Blackjack!",
+          "display_name": "Determine Whether To Launch XDR Blackjack!",
           "skip_execution": false
         },
         "object_type": "definition_activity",
         "blocks": [
           {
-            "unique_name": "definition_activity_025ZDVCB60GJP6O41hwGrIwBhRUx7TXW3tX",
+            "unique_name": "definition_activity_02609JACNZS8H4ljKDFT4xXnBlsyetUuPTA",
             "name": "Condition Branch",
             "title": "All Tests Passed And Game is Running",
             "type": "logic.condition_block",
@@ -104,14 +338,14 @@
                   },
                   "operator": "and",
                   "right_operand": {
-                    "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.input.variable_workflow_025ZDVC7FY2YS2uds4OknazVgIsPiKkIwyh$",
+                    "left_operand": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZAWZT6IkYbhWBs3nyYPZrqR5hVj$",
                     "operator": "eq",
                     "right_operand": false
                   }
                 },
                 "operator": "and",
                 "right_operand": {
-                  "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXGYU6ZruESuGRYbgYrdZt40R6O$",
+                  "left_operand": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.local.variable_workflow_02609J9XZB65Y1ccfmozOLeCCj1gD4uJYnL$",
                   "operator": "eq",
                   "right_operand": true
                 }
@@ -123,7 +357,7 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_025ZDVCCXF6Y47dln5Z2PnWhyiahLU8uhDc",
+                "unique_name": "definition_activity_02609JAEESBKO6r6fujhuthWO0ixfzsaIpx",
                 "name": "Initialize Blackjack Game",
                 "title": "Initialize Blackjack Game",
                 "type": "workflow.atomic_workflow",
@@ -133,7 +367,7 @@
                   "description": "This Atomic Function generates a random game_id and sends this, along with the input username, to the player's game client. This initializes the game of Blackjack for the game client. This information is also stored in the XDR global data record, \"Blackjack Game History\".",
                   "display_name": "Initialize Blackjack Game",
                   "input": {
-                    "variable_workflow_025V8W920O2TD0fWvQBm8KDa7EwBQJJFPwc": "TO DO: Select Input Variable - Participant Name"
+                    "variable_workflow_025V8W920O2TD0fWvQBm8KDa7EwBQJJFPwc": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZBM5I1Wg4XrORCTgIE6Rr4hedHl$"
                   },
                   "runtime_user": {
                     "target_default": true
@@ -148,7 +382,7 @@
                 "object_type": "definition_activity"
               },
               {
-                "unique_name": "definition_activity_025ZDVCDX75QF5tAgmLhTSbl5WqtrWS2IxW",
+                "unique_name": "definition_activity_02609JAFLNOIM68sEn6Ils7DEwuYjBWWTrO",
                 "name": "While Loop",
                 "title": "While Game Is Active",
                 "type": "logic.while",
@@ -162,7 +396,7 @@
                 "object_type": "definition_activity",
                 "blocks": [
                   {
-                    "unique_name": "definition_activity_025ZDVCEQC7CK6IMj80VoT8TkrNBN3basMW",
+                    "unique_name": "definition_activity_02609JAGGVXXC3LfFWNBxIAnzuxGBwHe9EF",
                     "name": "Condition Branch",
                     "title": "If game_counter < 500",
                     "type": "logic.condition_block",
@@ -170,7 +404,7 @@
                     "properties": {
                       "condition": {
                         "left_operand": {
-                          "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXSD10HOhiDIE3zMYFgrWWRazLk$",
+                          "left_operand": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.local.variable_workflow_02609J9XZALOS1FUVoCNjM0p0WYKBuXSRhP$",
                           "operator": "lt",
                           "right_operand": 500
                         },
@@ -189,7 +423,7 @@
                     "object_type": "definition_activity",
                     "actions": [
                       {
-                        "unique_name": "definition_activity_025ZDVCG4BZQU3PFrR6qQTOVFlGjvQiyjnH",
+                        "unique_name": "definition_activity_02609JAHWEHC970LOo8eopaFSfwslFz9dnz",
                         "name": "Execute Python Script",
                         "title": "Get Game State From The User's Client",
                         "type": "python3.script",
@@ -199,9 +433,9 @@
                           "continue_on_failure": false,
                           "description": "This activity block allows us to insert Python code into our XDR Orchestration workflow! In this case, we input the client URL and make a \"Get\" request to our client to obtain information on the current state of the game. In particular, we want to keep track of earnings as hands are being played and store this information globally. ",
                           "display_name": "Get Game State From The User's Client",
-                          "script": "import sys, json, requests\n\n#Load client url into variable url\nurl=sys.argv[1]\n\n#add API endpoint for reading and posting to the client game config\nactive_url=url + \"/api/config\"\n\n#Perform a get api request using the requests library\nheaders = {\n            'Content-Type': 'application/json',\n            'Accept': 'application/json'\n            }\npayload = json.dumps({})\nresponse = requests.request(\"GET\", active_url, headers=headers, data=payload)\n\n#Load the response into a dictionary\ncurrent_config = json.loads(response.text)\n\n#The current money for your player will be the value under the key \"balance\"\ncurrent_money = current_config[\"balance\"]",
+                          "script": "import sys, json, requests\n\n#Load client url into variable url\nurl=sys.argv[1]\n\n#Remove white space and potential final \"/\" from user input\nurl=url.strip()\nif url[-1] == \"/\":\n  url=url.rstrip(url[-1])\n\n#add API endpoint for reading and posting to the client game config  \nactive_url=url + \"/api/config\"\n\n#Perform a get api request using the requests library\nheaders = {\n            'Content-Type': 'application/json',\n            'Accept': 'application/json'\n            }\npayload = json.dumps({})\nresponse = requests.request(\"GET\", active_url, headers=headers, data=payload)\n\n#Load the response into a dictionary\ncurrent_config = json.loads(response.text)\n\n#The current money for your player will be the value under the key \"balance\"\ncurrent_money = current_config[\"balance\"]",
                           "script_arguments": [
-                            "TO DO: Select Input Variable - Client URL"
+                            "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZBEB552K3Kojktn7MhdNXz3LH3e$"
                           ],
                           "script_queries": [
                             {
@@ -215,7 +449,7 @@
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_025ZDVCH6BKPU6CXv4CfVlvhLQoFmScnLyG",
+                        "unique_name": "definition_activity_02609JAJ7E4F42CnvtdbPywEvnKbKZ2xSLK",
                         "name": "Update Row in Table",
                         "title": "Update Game Record",
                         "type": "core.updaterowintable",
@@ -236,19 +470,19 @@
                             {
                               "key": "Money",
                               "type": "string",
-                              "value": "$activity.definition_activity_025ZDVCG4BZQU3PFrR6qQTOVFlGjvQiyjnH.output.script_queries.current_money$"
+                              "value": "$activity.definition_activity_02609JAHWEHC970LOo8eopaFSfwslFz9dnz.output.script_queries.current_money$"
                             }
                           ],
                           "rows": {
                             "rows_matching_criteria": true,
-                            "where_clause": "Attendee == \"TO DO: Select Input Variable - Participant Name\""
+                            "where_clause": "Attendee == \"$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZBM5I1Wg4XrORCTgIE6Rr4hedHl$\""
                           },
                           "skip_execution": false
                         },
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_025ZDVCJM5S124BnrLmeWWBE7AeLluTujIE",
+                        "unique_name": "definition_activity_02609JALJZNQG232GuwZhjyLIJvr04fIiRE",
                         "name": "Update Leaderboard",
                         "title": "Update Leaderboard",
                         "type": "workflow.atomic_workflow",
@@ -257,7 +491,7 @@
                           "continue_on_failure": false,
                           "display_name": "Update Leaderboard",
                           "input": {
-                            "variable_workflow_025WYK2XGMXNN4WQCdQAzF3mDJmqogdr1cy": "TO DO: Enter URL Variable"
+                            "variable_workflow_025WYK2XGMXNN4WQCdQAzF3mDJmqogdr1cy": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZBEB552K3Kojktn7MhdNXz3LH3e$"
                           },
                           "runtime_user": {
                             "target_default": true
@@ -272,7 +506,7 @@
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_025ZDVCKS9PSI2NpEM5JdxiL0YxkH9lL9ve",
+                        "unique_name": "definition_activity_02609JAMXRJK84B5vVePSuGd4vhVpa3Ai8C",
                         "name": "Set Variables",
                         "title": "Increment Counter",
                         "type": "core.set_multiple_variables",
@@ -283,15 +517,15 @@
                           "skip_execution": false,
                           "variables_to_update": [
                             {
-                              "variable_to_update": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXSD10HOhiDIE3zMYFgrWWRazLk$",
-                              "variable_value_new": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXSD10HOhiDIE3zMYFgrWWRazLk$+1"
+                              "variable_to_update": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.local.variable_workflow_02609J9XZALOS1FUVoCNjM0p0WYKBuXSRhP$",
+                              "variable_value_new": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.local.variable_workflow_02609J9XZALOS1FUVoCNjM0p0WYKBuXSRhP$+1"
                             }
                           ]
                         },
                         "object_type": "definition_activity"
                       },
                       {
-                        "unique_name": "definition_activity_025ZDVCLLPCE16uDB9bCP12Z3z1Yz6L4JYK",
+                        "unique_name": "definition_activity_02609JANRCA0X4fIpHL84iRc3xM1zxcj0bT",
                         "name": "Sleep",
                         "title": "Wait Before Next Polling Interval",
                         "type": "core.sleep",
@@ -309,7 +543,7 @@
                 ]
               },
               {
-                "unique_name": "definition_activity_025ZDVCMFWDBN7TmJhJDZHAkZYa0UChRUnG",
+                "unique_name": "definition_activity_02609JAOG4OFT5tcutciZVW7gjt1OSZJN6r",
                 "name": "Select from Table",
                 "title": "Generate Results String",
                 "type": "core.selectfromtable",
@@ -350,7 +584,7 @@
                 "object_type": "definition_activity"
               },
               {
-                "unique_name": "definition_activity_025ZDVCNYVMVN5wNtgrukkgkUFV8GVM9fhb",
+                "unique_name": "definition_activity_02609JAQ2XSY83UyGFux5Zjn1CyGAMdfiMf",
                 "name": "Execute Python Script",
                 "title": "Compute Player with Max Earnings",
                 "type": "python3.script",
@@ -362,7 +596,7 @@
                   "display_name": "Compute Player with Max Earnings",
                   "script": "import sys, json, math\n\n#Load the string representation of our global data record into \"final_results\"\nfinal_results=json.loads(sys.argv[1])\nscore_list=[]\n\n#Create a list of only earnings values\nfor result in final_results:\n  if result[\"Attendee\"] != \"\":\n     score_list.append(int(result[\"Money\"]))\n\n#Determine the maximum earnings\nwinning_score=max(score_list)\n\n#Determine which player had the maximum earnings\nfor result in final_results:\n  if result[\"Attendee\"] != \"\":\n    if winning_score==int(result[\"Money\"]):\n      winning_name=result[\"Attendee\"]",
                   "script_arguments": [
-                    "$activity.definition_activity_025ZDVCMFWDBN7TmJhJDZHAkZYa0UChRUnG.output.response_body$"
+                    "$activity.definition_activity_02609JAOG4OFT5tcutciZVW7gjt1OSZJN6r.output.response_body$"
                   ],
                   "script_queries": [
                     {
@@ -376,34 +610,22 @@
                 "object_type": "definition_activity"
               },
               {
-                "unique_name": "definition_activity_025ZDVCPJCI1V7cpCbNp31xC80Kjxhn7lix",
-                "name": "Send Congratulations Email",
-                "title": "Send Congratulations Email",
-                "type": "workflow.atomic_workflow",
-                "base_type": "subworkflow",
+                "unique_name": "definition_activity_0260A3OMOF1PV2Q93oXXXkIxFBa6TI8DyxP",
+                "name": "Group",
+                "title": "Drag \"Send Congratulations Email\" Here!",
+                "type": "logic.group",
+                "base_type": "activity",
                 "properties": {
                   "continue_on_failure": false,
-                  "description": "This Atomic Function sends an email to all players thanking them for playing SecureX Blackjack!",
-                  "display_name": "Send Congratulations Email",
-                  "input": {
-                    "variable_workflow_025R4XYAQKL101RsrpvPgwcf8dgs8JKF16f": "$activity.definition_activity_025ZDVCNYVMVN5wNtgrukkgkUFV8GVM9fhb.output.script_queries.winning_name$"
-                  },
-                  "runtime_user": {
-                    "target_default": true
-                  },
-                  "skip_execution": false,
-                  "target": {
-                    "no_target": true
-                  },
-                  "workflow_id": "definition_workflow_025KXZZ522PI52xzHm3Z0DXEUvAwQesJAD5",
-                  "workflow_name": "Winner Email"
+                  "display_name": "Drag \"Send Congratulations Email\" Here!",
+                  "skip_execution": false
                 },
                 "object_type": "definition_activity"
               }
             ]
           },
           {
-            "unique_name": "definition_activity_025ZDVCQUFBAQ04mAvPN5lTTDQB9BDk7RZQ",
+            "unique_name": "definition_activity_02609JAT7IFRH1hBAxN1aXVQjYkE6JMr15O",
             "name": "Condition Branch",
             "title": "All Tests Passed - Re-run outside of a Test Run!",
             "type": "logic.condition_block",
@@ -418,14 +640,14 @@
                   },
                   "operator": "and",
                   "right_operand": {
-                    "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.input.variable_workflow_025ZDVC7FY2YS2uds4OknazVgIsPiKkIwyh$",
+                    "left_operand": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.input.variable_workflow_02609J9XZAWZT6IkYbhWBs3nyYPZrqR5hVj$",
                     "operator": "eq",
                     "right_operand": true
                   }
                 },
                 "operator": "and",
                 "right_operand": {
-                  "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXGYU6ZruESuGRYbgYrdZt40R6O$",
+                  "left_operand": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.local.variable_workflow_02609J9XZB65Y1ccfmozOLeCCj1gD4uJYnL$",
                   "operator": "eq",
                   "right_operand": true
                 }
@@ -437,7 +659,7 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_025ZDVCRXBANL7HUNdYVlaqVm58FA5yqHg0",
+                "unique_name": "definition_activity_02609JAUGF98Z3OXeeEt2GvMwDisKFdBRM1",
                 "name": "Completed",
                 "title": "All Tests Passed!",
                 "type": "logic.completed",
@@ -454,7 +676,7 @@
             ]
           },
           {
-            "unique_name": "definition_activity_025ZDVCSN90QD1NqYHfsXZpTzM3Edu7PiHR",
+            "unique_name": "definition_activity_02609JAVAU9GH5yxP3Uomg8k4mgFDBLm0w3",
             "name": "Condition Branch",
             "title": "Tests Failed Or Not Implemented",
             "type": "logic.condition_block",
@@ -468,7 +690,7 @@
                 },
                 "operator": "or",
                 "right_operand": {
-                  "left_operand": "$workflow.definition_workflow_025ZDVC78F9BL6tMzrGJkNxxvYtH52FPPX5.local.variable_workflow_025ZDVC7FXGYU6ZruESuGRYbgYrdZt40R6O$",
+                  "left_operand": "$workflow.definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR.local.variable_workflow_02609J9XZB65Y1ccfmozOLeCCj1gD4uJYnL$",
                   "operator": "eq",
                   "right_operand": false
                 }
@@ -480,7 +702,7 @@
             "object_type": "definition_activity",
             "actions": [
               {
-                "unique_name": "definition_activity_025ZDVCTPSRTE58m1AOtv4QaoaTa59xy7Le",
+                "unique_name": "definition_activity_02609JAWHR2TY3FmEs2y2MfX9Hh2Wtxwe9x",
                 "name": "Completed",
                 "title": "Failed Test Conditions Exception",
                 "type": "logic.completed",
@@ -503,7 +725,50 @@
       "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
     ]
   },
+  "targets": {
+    "definition_target_01MKEEBXR8ZBJ7VkdH7i74yR55W6nkyYhrp": {
+      "unique_name": "definition_target_01MKEEBXR8ZBJ7VkdH7i74yR55W6nkyYhrp",
+      "name": "Webex Teams",
+      "title": "Webex Teams",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "description": "Webex Teams",
+        "disable_certificate_validation": false,
+        "display_name": "Webex Teams",
+        "host": "webexapis.com",
+        "no_runtime_user": true,
+        "port": 443,
+        "protocol": "https"
+      }
+    }
+  },
   "variables": {
+    "variable_0257C2T1JSI077DkpTCi8lbUTOjElHqH3eZ": {
+      "unique_name": "variable_0257C2T1JSI077DkpTCi8lbUTOjElHqH3eZ",
+      "properties": {
+        "value": "Y2lzY29zcGFyazovL3VzL1JPT00vYzViYzcxYTAtY2MxZS0xMWVkLTlhMjMtZWIyMzczNTJiN2Q5",
+        "scope": "global",
+        "name": "webex-room-blackjack",
+        "type": "datatype.string",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    },
+    "variable_0257C31UC41SU5DDM61EcYCGq5j6re3ETZ5": {
+      "unique_name": "variable_0257C31UC41SU5DDM61EcYCGq5j6re3ETZ5",
+      "properties": {
+        "value": "ZWUwNzM3NzEtM2M2MS00YmM2LWFmMjMtYjg5MDE5NGIyZmUwMjU4NDlkZTgtYzM2_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f",
+        "scope": "global",
+        "name": "blackjack-dealer-token",
+        "type": "datatype.string",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    },
     "variable_025R2OZ4IU8AH1cybIGaZ71aQ8d6OxuxKrQ": {
       "unique_name": "variable_025R2OZ4IU8AH1cybIGaZ71aQ8d6OxuxKrQ",
       "properties": {
@@ -533,22 +798,62 @@
           },
           {
             "column_data": {
-              "Attendee": "MatthewQuarisa",
-              "Email": "12mwq@queensu.ca",
-              "Game_id": "9040773012",
-              "Money": "100",
-              "Start_time": "15:32:03",
-              "URL": "https://app-8080-490104014917794163.devenv-prod.us-west-1.devnetcloud.com"
+              "Attendee": "Matt Q",
+              "Email": "mquarisa@cisco.com",
+              "Game_id": "4200944757",
+              "Money": "250",
+              "Start_time": "17:15:22",
+              "URL": "https://app-8080-7475401223805395333.devenv-prod.us-west-1.devnetcloud.com"
             }
           },
           {
             "column_data": {
-              "Attendee": "MatthewQuarisa1234",
-              "Email": "matthew_quarisa@hotmail.com",
-              "Game_id": "5088858727",
+              "Attendee": "Barry Y",
+              "Email": "fss",
+              "Game_id": "",
+              "Money": "",
+              "Start_time": "",
+              "URL": "trwe"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "Matthew Quarisa",
+              "Email": "gtrew",
+              "Game_id": "",
+              "Money": "",
+              "Start_time": "",
+              "URL": "trw"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "Matty Q",
+              "Email": "gsfeaw",
+              "Game_id": "9107887733",
               "Money": "250",
-              "Start_time": "15:43:23",
-              "URL": "https://app-8080-490104014917794163.devenv-prod.us-west-1.devnetcloud.com"
+              "Start_time": "17:38:50",
+              "URL": "https://app-8080-7475401223805395333.devenv-prod.us-west-1.devnetcloud.com"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "jhtgref",
+              "Email": "htrgefw",
+              "Game_id": "9766321913",
+              "Money": "250",
+              "Start_time": "18:18:59",
+              "URL": "https://app-8080-5857528337236726565.devenv-prod.us-west-1.devnetcloud.com/"
+            }
+          },
+          {
+            "column_data": {
+              "Attendee": "htgerf",
+              "Email": "hgf",
+              "Game_id": "3132597583",
+              "Money": "250",
+              "Start_time": "18:25:13",
+              "URL": "https://app-8080-5857528337236726565.devenv-prod.us-west-1.devnetcloud.com/"
             }
           }
         ],
@@ -569,6 +874,16 @@
       "display_name": "XDR Blackjack Record",
       "columns": [
         {
+          "name": "Start_time",
+          "title": "Start Time",
+          "type": "string"
+        },
+        {
+          "name": "Attendee",
+          "title": "Player Name",
+          "type": "string"
+        },
+        {
           "name": "Money",
           "title": "Earnings",
           "type": "string"
@@ -587,16 +902,6 @@
           "name": "Game_id",
           "title": "Game Id",
           "type": "string"
-        },
-        {
-          "name": "Start_time",
-          "title": "Start Time",
-          "type": "string"
-        },
-        {
-          "name": "Attendee",
-          "title": "Player Name",
-          "type": "string"
         }
       ],
       "base_type": "datatype",
@@ -605,12 +910,10 @@
   },
   "atomic_workflows": [
     "definition_workflow_025V8SI32E1I61pxPwmzoVOSRbgkfQ9B0qh",
-    "definition_workflow_025WY88BJWUHQ4dCkcfr3zs1ZVRTZkkvcEH",
-    "definition_workflow_025KXZZ522PI52xzHm3Z0DXEUvAwQesJAD5"
+    "definition_workflow_025WY88BJWUHQ4dCkcfr3zs1ZVRTZkkvcEH"
   ],
   "dependent_workflows": [
     "definition_workflow_025V8SI32E1I61pxPwmzoVOSRbgkfQ9B0qh",
-    "definition_workflow_025WY88BJWUHQ4dCkcfr3zs1ZVRTZkkvcEH",
-    "definition_workflow_025KXZZ522PI52xzHm3Z0DXEUvAwQesJAD5"
+    "definition_workflow_025WY88BJWUHQ4dCkcfr3zs1ZVRTZkkvcEH"
   ]
 }
