@@ -1,11 +1,77 @@
 {
   "workflow": {
     "unique_name": "definition_workflow_02609J9XMAQ3Y2T9KnCnQ3BBq409xBwSTHR",
-    "name": "Getting-Started-XDR-Incomplete",
-    "title": "Getting-Started-XDR-Incomplete",
+    "name": "Getting-Started-XDR-XY",
+    "title": "Getting-Started-XDR-XY",
     "type": "generic.workflow",
     "base_type": "workflow",
     "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "{\n    \"house\": {\n        \"name\": \"house\", \n        \"money\": 0\n        }, \n    \"players\": \n        [ ], \n    \"playerturn\": {}, \n\t\t  \n    \"gameid\": \"2mKYQR-klZ6XahlIAAAD\"\n} ",
+          "scope": "local",
+          "name": "Data Format",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZC1R94wjFTO1hjsLmkhC4RLc2Pr",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Client URL",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZBEB552K3Kojktn7MhdNXz3LH3e",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": true,
+          "scope": "input",
+          "name": "Test Run",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZAWZT6IkYbhWBs3nyYPZrqR5hVj",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Email",
+          "type": "datatype.string",
+          "description": "Please Enter your Email! We'll use this to send an email to you following the game with winner details.",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZBTCS5vIY2W38WXT1uByBUsnV65",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 0,
+          "scope": "local",
+          "name": "game_counter",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_02609J9XZALOS1FUVoCNjM0p0WYKBuXSRhP",
+        "object_type": "variable_workflow"
+      },
       {
         "schema_id": "datatype.boolean",
         "properties": {
@@ -24,78 +90,12 @@
         "properties": {
           "value": "",
           "scope": "input",
-          "name": "Client URL",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_02609J9XZBEB552K3Kojktn7MhdNXz3LH3e",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "Email",
-          "type": "datatype.string",
-          "description": "Please Enter your Email! We'll use this to send an email to you following the game with winner details.",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_02609J9XZBTCS5vIY2W38WXT1uByBUsnV65",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
           "name": "Participant Name",
           "type": "datatype.string",
           "is_required": true,
           "is_invisible": false
         },
         "unique_name": "variable_workflow_02609J9XZBM5I1Wg4XrORCTgIE6Rr4hedHl",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "{\n    \"house\": {\n        \"name\": \"house\", \n        \"money\": 0\n        }, \n    \"players\": \n        [ ], \n    \"playerturn\": {}, \n\t\t  \n    \"gameid\": \"2mKYQR-klZ6XahlIAAAD\"\n} ",
-          "scope": "local",
-          "name": "Data Format",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_02609J9XZC1R94wjFTO1hjsLmkhC4RLc2Pr",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.boolean",
-        "properties": {
-          "value": true,
-          "scope": "input",
-          "name": "Test Run",
-          "type": "datatype.boolean",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_02609J9XZAWZT6IkYbhWBs3nyYPZrqR5hVj",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.integer",
-        "properties": {
-          "value": 0,
-          "scope": "local",
-          "name": "game_counter",
-          "type": "datatype.integer",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_02609J9XZALOS1FUVoCNjM0p0WYKBuXSRhP",
         "object_type": "variable_workflow"
       }
     ],
@@ -105,14 +105,9 @@
       },
       "delete_workflow_instance": false,
       "description": "Cisco Live Session: SecureX Blackjack!",
-      "display_name": "Getting-Started-XDR-Incomplete",
-      "runtime_user": {
-        "target_default": true
-      },
+      "display_name": "Getting-Started-XDR-XY",
       "target": {
-        "target_type": "web-service.endpoint",
-        "target_id": "definition_target_01MKEEBXR8ZBJ7VkdH7i74yR55W6nkyYhrp",
-        "execute_on_workflow_target": true
+        "no_target": true
       }
     },
     "object_type": "definition_workflow",
@@ -725,25 +720,6 @@
       "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
     ]
   },
-  "targets": {
-    "definition_target_01MKEEBXR8ZBJ7VkdH7i74yR55W6nkyYhrp": {
-      "unique_name": "definition_target_01MKEEBXR8ZBJ7VkdH7i74yR55W6nkyYhrp",
-      "name": "Webex Teams",
-      "title": "Webex Teams",
-      "type": "web-service.endpoint",
-      "base_type": "target",
-      "object_type": "definition_target",
-      "properties": {
-        "description": "Webex Teams",
-        "disable_certificate_validation": false,
-        "display_name": "Webex Teams",
-        "host": "webexapis.com",
-        "no_runtime_user": true,
-        "port": 443,
-        "protocol": "https"
-      }
-    }
-  },
   "variables": {
     "variable_0257C2T1JSI077DkpTCi8lbUTOjElHqH3eZ": {
       "unique_name": "variable_0257C2T1JSI077DkpTCi8lbUTOjElHqH3eZ",
@@ -874,6 +850,11 @@
       "display_name": "XDR Blackjack Record",
       "columns": [
         {
+          "name": "Game_id",
+          "title": "Game Id",
+          "type": "string"
+        },
+        {
           "name": "Start_time",
           "title": "Start Time",
           "type": "string"
@@ -896,11 +877,6 @@
         {
           "name": "URL",
           "title": "Client URL",
-          "type": "string"
-        },
-        {
-          "name": "Game_id",
-          "title": "Game Id",
           "type": "string"
         }
       ],
