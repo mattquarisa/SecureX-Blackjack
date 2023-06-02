@@ -7,6 +7,57 @@
     "base_type": "workflow",
     "variables": [
       {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "value": true,
+          "scope": "input",
+          "name": "Test Run",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0264J05VCFVNQ04D1VDcRHGfbVYQ2Mgwdm0",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Participant Name",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0264J05VCGU8R6WQzg1LOfuEFMfOGgbCepv",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.boolean",
+        "properties": {
+          "scope": "local",
+          "name": "All Tests Passed",
+          "type": "datatype.boolean",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0264J15IN00DK1uf54hOOethKtaObwof9qd",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "{\n    \"house\": {\n        \"name\": \"house\", \n        \"money\": 0\n        }, \n    \"players\": \n        [ ], \n    \"playerturn\": {}, \n\t\t  \n    \"gameid\": \"2mKYQR-klZ6XahlIAAAD\"\n} ",
+          "scope": "local",
+          "name": "Data Format",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0264J05VCGCT95h47kLUeRk3IlvN2fKq808",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -36,26 +87,14 @@
       {
         "schema_id": "datatype.boolean",
         "properties": {
+          "value": true,
           "scope": "local",
-          "name": "All Tests Passed",
+          "name": "Unique Name Check",
           "type": "datatype.boolean",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0264J15IN00DK1uf54hOOethKtaObwof9qd",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "{\n    \"house\": {\n        \"name\": \"house\", \n        \"money\": 0\n        }, \n    \"players\": \n        [ ], \n    \"playerturn\": {}, \n\t\t  \n    \"gameid\": \"2mKYQR-klZ6XahlIAAAD\"\n} ",
-          "scope": "local",
-          "name": "Data Format",
-          "type": "datatype.string",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0264J05VCGCT95h47kLUeRk3IlvN2fKq808",
+        "unique_name": "variable_workflow_0264J05VCGLLN1OcJ83S1nEU1Dw2GEuWCdx",
         "object_type": "variable_workflow"
       },
       {
@@ -69,45 +108,6 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_0264J05VCFJBY42SdoJEwcp4JpPV6p2gVUM",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.boolean",
-        "properties": {
-          "value": true,
-          "scope": "input",
-          "name": "Test Run",
-          "type": "datatype.boolean",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0264J05VCFVNQ04D1VDcRHGfbVYQ2Mgwdm0",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "Participant Name",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0264J05VCGU8R6WQzg1LOfuEFMfOGgbCepv",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.boolean",
-        "properties": {
-          "value": true,
-          "scope": "local",
-          "name": "Unique Name Check",
-          "type": "datatype.boolean",
-          "is_required": false,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_0264J05VCGLLN1OcJ83S1nEU1Dw2GEuWCdx",
         "object_type": "variable_workflow"
       }
     ],
@@ -160,7 +160,7 @@
                   "value": "Bearer $global.variable_0257C31UC41SU5DDM61EcYCGq5j6re3ETZ5.global.variable_0257C31UC41SU5DDM61EcYCGq5j6re3ETZ5$"
                 }
               ],
-              "description": "Send a message to Webex indicating that this name is already in use.",
+              "description": "Send a message to Webex indicating that the input name is already in use.",
               "display_name": "Send Message To Webex",
               "method": "POST",
               "relative_url": "/v1/messages/",
@@ -183,7 +183,7 @@
             "properties": {
               "completion_type": "failed-completed",
               "continue_on_failure": true,
-              "description": "Stop the workflow and prompt the user to enter another name.",
+              "description": "Generate a duplicate name exception and prompt the user to enter another name.",
               "display_name": "Generate Error",
               "result_message": "Please choose another name",
               "skip_execution": false
@@ -198,6 +198,7 @@
             "base_type": "activity",
             "properties": {
               "continue_on_failure": false,
+              "description": "Write the value of false to the local variable \"Unique Name Check\"",
               "display_name": "Write Duplicate Name",
               "skip_execution": false,
               "variables_to_update": [
@@ -219,6 +220,7 @@
         "base_type": "activity",
         "properties": {
           "continue_on_failure": false,
+          "description": "Your first problem to complete!",
           "display_name": "Activity 1: Verifying Your Name",
           "skip_execution": false
         },
@@ -232,6 +234,7 @@
             "base_type": "activity",
             "properties": {
               "continue_on_failure": false,
+              "description": "Iterate through each participant in the current Blackjack sitting",
               "display_name": "For Each Participant At The Table",
               "skip_execution": false,
               "source_array": "$global.variable_025XHXMLGMOMJ2XM9pFRenhgvFxor99IE66.global.variable_025XHXMLGMOMJ2XM9pFRenhgvFxor99IE66$"
@@ -278,6 +281,7 @@
                         "base_type": "activity",
                         "properties": {
                           "continue_on_failure": false,
+                          "description": "Exit the loop because the condition has been activated.",
                           "display_name": "Break",
                           "skip_execution": false
                         },
@@ -312,6 +316,7 @@
                         "base_type": "activity",
                         "properties": {
                           "continue_on_failure": false,
+                          "description": "Continue with loop operation",
                           "display_name": "Continue",
                           "skip_execution": false
                         },
@@ -333,6 +338,7 @@
         "base_type": "activity",
         "properties": {
           "continue_on_failure": false,
+          "description": "Your second problem to complete!",
           "display_name": "Activity 2: Atomic Functions",
           "skip_execution": false
         },
@@ -346,6 +352,7 @@
             "base_type": "activity",
             "properties": {
               "continue_on_failure": false,
+              "description": "Set the value of the local variable \"All Tests Passed\" to the output of the Atomic Function \"Getting the Table Ready (Single Player)\"",
               "display_name": "Update All Tests Passed Variable",
               "skip_execution": false
             },
@@ -361,6 +368,7 @@
         "base_type": "activity",
         "properties": {
           "continue_on_failure": false,
+          "description": "Test conditions",
           "display_name": "Determine Whether To Launch XDR Blackjack!",
           "skip_execution": false
         },
@@ -533,6 +541,7 @@
                         "base_type": "subworkflow",
                         "properties": {
                           "continue_on_failure": false,
+                          "description": "This Atomic Function updates the leaderboard hosted within each player's user client via writing to it's associated API.",
                           "display_name": "Update Leaderboard",
                           "input": {
                             "variable_workflow_025WYK2XGMXNN4WQCdQAzF3mDJmqogdr1cy": "$workflow.definition_workflow_0264J05V2XILF1ZQrk169smeXwiexvOuuAS.input.variable_workflow_0264J05VCH1M41J3eYFlHpjYZCAUA4V797h$"
@@ -674,12 +683,14 @@
                     "base_type": "subworkflow",
                     "properties": {
                       "continue_on_failure": false,
+                      "description": "This activity sends an email to the participant either congratulating them on winning or thanking them for playing.",
                       "display_name": "Winner Email",
                       "input": {
-                        "variable_workflow_025R4XYAQKL101RsrpvPgwcf8dgs8JKF16f": "$activity.definition_activity_0264J06UJQXGN1ocQhZ78MR0WDDztyE6y5U.output.script_queries.winning_name$"
+                        "variable_workflow_025R4XYAQKL101RsrpvPgwcf8dgs8JKF16f": "$activity.definition_activity_0264J06UJQXGN1ocQhZ78MR0WDDztyE6y5U.output.script_queries.winning_name$",
+                        "variable_workflow_0265GTONF69GV03BgyfJsBytQL86VuOA0XG": "$workflow.definition_workflow_0264J05V2XILF1ZQrk169smeXwiexvOuuAS.input.variable_workflow_0264J05VCGU8R6WQzg1LOfuEFMfOGgbCepv$",
+                        "variable_workflow_0265H0DHV4J7A7l6rVYg4Ro3Ke8PHgW4vk3": "$workflow.definition_workflow_0264J05V2XILF1ZQrk169smeXwiexvOuuAS.input.variable_workflow_0264J05VCG3I81Oc2aJkyLVEYAMiBIrS9cF$"
                       },
                       "runtime_user": {
-                        "override_target_runtime_user": false,
                         "target_default": true
                       },
                       "skip_execution": false,
@@ -738,6 +749,7 @@
                 "properties": {
                   "completion_type": "succeeded",
                   "continue_on_failure": false,
+                  "description": "Your test run was successful! You are now ready to run XDR Blackjack.",
                   "display_name": "All Tests Passed!",
                   "result_message": "Please re-run this workflow outside of a test run!",
                   "skip_execution": false
@@ -781,6 +793,7 @@
                 "properties": {
                   "completion_type": "failed-completed",
                   "continue_on_failure": false,
+                  "description": "One or more tests must have failed for this condition to be triggered.",
                   "display_name": "Failed Test Conditions Exception",
                   "result_message": "Please ensure all tests are passed and implemented.",
                   "skip_execution": false
@@ -866,11 +879,6 @@
       "display_name": "XDR Blackjack Record",
       "columns": [
         {
-          "name": "URL",
-          "title": "Client URL",
-          "type": "string"
-        },
-        {
           "name": "Game_id",
           "title": "Game Id",
           "type": "string"
@@ -893,6 +901,11 @@
         {
           "name": "Email",
           "title": "Email",
+          "type": "string"
+        },
+        {
+          "name": "URL",
+          "title": "Client URL",
           "type": "string"
         }
       ],
